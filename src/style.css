@@ -1,1 +1,57 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
+body {
+  background-color: green;
+  padding: 5rem;
+  box-sizing: border-box;
+}
+#card {
+  margin: auto;
+  display: inline-block;
+  margin: auto;
+  background-color: white;
+  height: 550px;
+  width: 350px;
+  padding: 4rem;
+  border: 0.3rem solid black;
+  border-radius: 1rem;
+
+  .number {
+    position: absolute;
+    top: 15rem;
+    right: 46rem;
+    font-size: 7rem;
+  }
+  &:before {
+    position: absolute;
+    top: 7rem;
+    left: 40rem;
+    font-size: 4rem;
+  }
+  &:after {
+    position: absolute;
+    bottom: 10rem;
+    right: 40rem;
+    font-size: 4rem;
+  }
+
+  &.trebol:before,
+  &.trebol:after {
+    content: "♣";
+  }
+
+  &.dinamond::before,
+  &.dinamond::after {
+    color: red;
+    content: "♦";
+  }
+
+  &.heart:before,
+  &.heart:after {
+    content: "♥";
+    color: red;
+  }
+  &.picas:before,
+  &.picas:after {
+    content: " ♠  ";
+  }
+}
